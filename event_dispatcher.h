@@ -1,5 +1,5 @@
-#ifndef ROCKET_EVENT_DISPATCHER_H
-#define ROCKET_EVENT_DISPATCHER_H
+#ifndef _ROCKET_EVENT_DISPATCHER_H_
+#define _ROCKET_EVENT_DISPATCHER_H_
 
 namespace rocket {
 
@@ -15,4 +15,4 @@ public:
 
 }
 
-#endif // ROCKET_EVENT_DISPATCHER_H_
+#endif // _ROCKET_EVENT_DISPATCHER_H_

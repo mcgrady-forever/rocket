@@ -1,12 +1,10 @@
-#ifndef SERVER_HPP
-#define SERVER_HPP
+#ifndef _ROCKET_SERVER_H_
+#define _ROCKET_SERVER_H_
 
 #include <string>
-
 #include <boost/asio.hpp>
 #include <boost/noncopyable.hpp>
 #include <boost/shared_ptr.hpp>
-#include "session.hpp"
 
 using boost::asio::ip::tcp;
 
@@ -16,8 +14,9 @@ namespace rocket
 class Server
 {
 public:
-    explicit Server(const unsigned short port, 
-                    const std::size_t thread_pool_size = 1);
+    explicit Server(const uint32_t port, 
+                    const int thread_pool_size = 1);
+    ~Server() {}
 
     //Run the server's io_service loop
     void run();
@@ -26,9 +25,10 @@ public:
     void stop();
     
 private:
-    int thread_pool_size_;
+    int         thread_pool_size_;
+    uint32_t    port_;
 };
 
 }
 
-#endif
+#endif // _ROCKET_SERVER_H_

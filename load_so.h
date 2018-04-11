@@ -1,28 +1,28 @@
 #ifndef _LOAD_SO_H_
 #define _LOAD_SO_H_
 
-namespace thunder {
+namespace rocket {
 
-typedef int (* thunder_handle_init_t)(void*);
-typedef int (* thunder_handle_input_t)(void*);
-typedef int (* thunder_handle_route_t)(unsigned, void*, void*);
-typedef int (* thunder_handle_process_t)(void*);
-typedef void (* thunder_handle_fini_t)(void*);
+typedef int (* rocket_handle_init_t)(void*);
+typedef int (* rocket_handle_input_t)(void*);
+typedef int (* rocket_handle_route_t)(unsigned, void*, void*);
+typedef int (* rocket_handle_process_t)(void*);
+typedef void (* rocket_handle_fini_t)(void*);
 
 typedef struct {
     void* handle;
-    thunder_handle_init_t    thunder_handle_init;
-    thunder_handle_input_t   thunder_handle_input;
-    thunder_handle_route_t   thunder_handle_route;
-    thunder_handle_process_t thunder_handle_process;
-    thunder_handle_fini_t    thunder_handle_fini;
+    rocket_handle_init_t    rocket_handle_init;
+    rocket_handle_input_t   rocket_handle_input;
+    rocket_handle_route_t   rocket_handle_route;
+    rocket_handle_process_t rocket_handle_process;
+    rocket_handle_fini_t    rocket_handle_fini;
 
-} thunder_dll_func_t;
+} rocket_dll_func_t;
 
-extern thunder_dll_func_t thunder_dll;
+extern rocket_dll_func_t rocket_dll;
 
 int load_so(const char* file);
 
-}  // namespace thunder
+}  // namespace rocket
 
 #endif

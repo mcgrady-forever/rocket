@@ -8,7 +8,7 @@
 
 using namespace std;
 
-namespace thunder
+namespace rocket
 {
 
 class ConfigReader

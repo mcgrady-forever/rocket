@@ -7,7 +7,7 @@
 
 using namespace std;
 
-namespace thunder
+namespace rocket
 {
 
 bool ConfigReader::Load(const string& file)

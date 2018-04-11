@@ -4,7 +4,7 @@
 #include "config.h"
 #include "config_reader.h"
 
-namespace thunder
+namespace rocket
 {
 
 bool Config::load(const char* file)

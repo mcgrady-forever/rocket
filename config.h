@@ -5,7 +5,7 @@
 
 #include "logger.h"
 
-namespace thunder
+namespace rocket
 {
 
 class Config

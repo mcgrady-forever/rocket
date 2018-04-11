@@ -1,16 +1,29 @@
 #ifndef _ROCKET_EVENT_DISPATCHER_H_
 #define _ROCKET_EVENT_DISPATCHER_H_
 
+#include "epoll_wrapper.h"
+
 namespace rocket {
 
 
 class EventDispatcher
 {
 public:
-	EventDispatcher();
+	EventDispatcher(const uint32_t port);
 	~EventDispatcher();
 	
-	int Start();
+	int init();
+
+	int loop();
+
+private:
+	void ProcessEvents(int fd, u_int events);
+
+private:
+	uint32_t    	listenfd_;
+	EpollWrapper 	epoll_;
+	int 			epollfd_;
+	bool            stop_;
 };
 
 }

@@ -1,12 +1,11 @@
 CXX = g++
-CXXFLAGS = -g -O2 -Wall -fPIC -lpthread
+CXXFLAGS = -std=c++11 -g -O2 -Wall -fPIC
 
-INC = -I./3rd/glog/include \
+INC = -I./3rd/glog/include
 
 LIB = -L./3rd/glog/lib -lglog \
-	  -lboost_system\
-      -lboost_thread\
       -ldl\
+	  -lpthread\
 
 OBJS = $(patsubst %.cc, %.o, $(wildcard *.cc))
 
@@ -17,7 +16,7 @@ all: clean $(BIN)
 $(BIN): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $^ $(LIB)
 
-%.o: %.cpp
+%.o: %.cc
 	$(CXX) $(CXXFLAGS) $(INC) -c -o $@ $<
 
 clean:

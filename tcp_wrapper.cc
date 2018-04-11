@@ -2,6 +2,7 @@
 
 #include <arpa/inet.h>
 #include <fcntl.h>
+#include <string.h>
 
 #include <string>
 
@@ -38,7 +39,7 @@ int TcpWrapper::AcceptConnection(int fd,
 	return clientFd;
 }
 
-int TcpWrapper::acceptConnection(int fd, sockaddr_in& sa)
+int TcpWrapper::AcceptConnection(int fd, sockaddr_in& sa)
 {
 	memset(&sa, 0, sizeof(sa));   
 	socklen_t salen = sizeof(sa);   
@@ -46,20 +47,20 @@ int TcpWrapper::acceptConnection(int fd, sockaddr_in& sa)
 	return accept(fd, (struct sockaddr *)&sa, &salen);
 }
 
-bool TcpWrapper::setNonBlocking(int fd)
+bool TcpWrapper::SetNonBlocking(int fd)
 {
 	return (fcntl(fd, F_SETFL, O_NONBLOCK) == 0);
 }
 
 
-bool TcpWrapper::setReuseAddr(int fd)
+bool TcpWrapper::SetReuseAddr(int fd)
 {
 	// Allow this port to be re-bound immediately so server re-starts are not delayed
 	int sflag = 1;
 	return (setsockopt(fd, SOL_SOCKET, SO_REUSEADDR, (const char *)&sflag, sizeof(sflag)) == 0);
 }
 
-bool TcpWrapper::setLinger(int fd, int nLinger)
+bool TcpWrapper::SetLinger(int fd, int nLinger)
 {
 	return true;
 	struct   linger   ling; 

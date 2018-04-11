@@ -1,12 +1,13 @@
 #ifndef _ROCKET_SERVER_H_
 #define _ROCKET_SERVER_H_
 
+#include <stdint.h>
 #include <string>
-#include <boost/asio.hpp>
-#include <boost/noncopyable.hpp>
-#include <boost/shared_ptr.hpp>
+//#include <boost/asio.hpp>
+//#include <boost/noncopyable.hpp>
+//#include <boost/shared_ptr.hpp>
 
-using boost::asio::ip::tcp;
+//using boost::asio::ip::tcp;
 
 namespace rocket
 {

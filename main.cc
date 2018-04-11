@@ -1,14 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <getopt.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <string.h>
+#include <signal.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
 #include <getopt.h>
 #include <iostream>
 #include <string>
-#include <boost/asio.hpp>
-#include <glog/logging.h>
-
+//#include "glog/logging.h"
 #include "logger.h"
 #include "config.h"
 #include "load_so.h"
 #include "server.h"
 
+using namespace std;
 using namespace rocket;
 
 static const char *opt_config = NULL;
@@ -146,17 +157,19 @@ int main(int argc, char* argv[])
     }
 
     std::cout << "log path:" << cfg._log_cfg.file << std::endl;
-    google::InitGoogleLogging(argv[0]);  
-    FLAGS_log_dir = "/home/chris/myspace/rocket/log/";
-    LOG(INFO) << "INFO";  
-    LOG(INFO) << "INFO1";  
+    /*
+    //google::InitGoogleLogging(argv[0]);  
+    //FLAGS_log_dir = "/home/chris/myspace/rocket/log/";
+    //LOG(INFO) << "INFO";  
+    //LOG(INFO) << "INFO1";  
     LOG(WARNING) << "WARNING";  
     LOG(WARNING) << "WARNING1";  
     LOG(ERROR) << "ERROR";  
     LOG(ERROR) << "ERROR1";  
     //LOG(FATAL) << "FATAL";  
     google::ShutdownGoogleLogging();  
-
+    */
+    
     LOGGER.init(cfg._log_cfg);
 
     LOG_INFO("rocket server listen on %s:%d", cfg._ip.c_str(), cfg._port);

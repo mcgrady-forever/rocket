@@ -31,9 +31,9 @@ public:
 
 	int AcceptConnection(int fd, sockaddr_in& sa);
 
-	bool setNonBlocking(int fd);
-	bool setReuseAddr(int fd);
-	bool setLinger(int fd, int nLinger);
+	bool SetNonBlocking(int fd);
+	bool SetReuseAddr(int fd);
+	bool SetLinger(int fd, int nLinger);
 protected:
 private:
 	pthread_mutex_t a_mutex;

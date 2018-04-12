@@ -21,15 +21,19 @@ public:
                     const int thread_pool_size = 1);
     ~Server() {}
 
-    //Run the server's io_service loop
+    // init
+    int init();
+
+    // Run the server's io_service loop
     void run();
 
-    //Stop the server
+    // Stop the server
     void stop();
     
 private:
     int                           thread_pool_size_;
     uint32_t                      port_;
+    int                           listenfd_;
     std::vector<NetworkThread*>   threads_;
 };
 

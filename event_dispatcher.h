@@ -9,7 +9,7 @@ namespace rocket {
 class EventDispatcher
 {
 public:
-	EventDispatcher(const uint32_t port);
+	EventDispatcher(const int listenfd);
 	~EventDispatcher();
 	
 	int init();

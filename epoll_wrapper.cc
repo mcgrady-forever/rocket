@@ -51,6 +51,7 @@ int EpollWrapper::DestroyHandle() {
 
 bool EpollWrapper::AddFdEvent(int fd, u_int events) {
 	if (ctl(EPOLL_CTL_ADD, fd, events) == -1) {
+		perror("AddFdEvent");
 		LOG_ERROR("AddFdEvent error, fd=%d", fd);
         return false;
 	}
@@ -76,12 +77,11 @@ int	 EpollWrapper::ctl(int op, int fd, u_int events) {
 	
 	e_event.data.fd = fd; 
 	
-	if ( op != EPOLL_CTL_DEL)
+	if (op != EPOLL_CTL_DEL)
 		e_event.events = EPOLLET;
-
-	if ( events & READ_READY )
+	if (events & READ_READY)
 		e_event.events |= EPOLLIN;
-	if ( events & WRITE_READY )
+	if (events & WRITE_READY)
 		e_event.events |= EPOLLOUT;
 
 	return epoll_ctl(epollfd_, op, fd, &e_event); 

@@ -4,11 +4,11 @@
 
 namespace rocket {
 
-EventDispatcher::EventDispatcher(const uint32_t listenfd) 
+EventDispatcher::EventDispatcher(const int listenfd) 
 	: listenfd_(listenfd)
     , stop_(false) {
     LOG_INFO("EventDispatcher");
-	if (!init())
+	if (init() != 0)
 	{
 		exit(EXIT_FAILURE);
 	}
@@ -19,12 +19,19 @@ EventDispatcher::~EventDispatcher() {
 }
 
 int EventDispatcher::init() {
+    LOG_INFO("EventDispatcher init 1");
 	int ret = 0;
-	if (!epoll_.CreateHandle()) 
+	if (!epoll_.CreateHandle()) {
+        perror("epoll_.CreateHandle()");
         return -1;
-	if(!epoll_.AddFdEvent(listenfd_, EpollWrapper::READ_READY))
-	    return -1;
+    }
+        
+	if(!epoll_.AddFdEvent(listenfd_, EpollWrapper::READ_READY)) {
+        perror("epoll_.AddFdEvent()");
+        return -1;
+    }
 
+    LOG_INFO("EventDispatcher init 2");  
 	return ret;
 }
 

@@ -1,7 +1,7 @@
 #ifndef _SOCKET_UTIL_H_
 #define _SOCKET_UTIL_H_
 
-# include <string>
+#include <string>
 #include <net/if.h>
 #include <net/if_arp.h>
 #include <arpa/inet.h>

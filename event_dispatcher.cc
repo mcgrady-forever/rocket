@@ -5,7 +5,9 @@
 namespace rocket {
 
 EventDispatcher::EventDispatcher(const uint32_t listenfd) 
-	: listenfd_(listenfd) {
+	: listenfd_(listenfd)
+    , stop_(false) {
+    LOG_INFO("EventDispatcher");
 	if (!init())
 	{
 		exit(EXIT_FAILURE);
@@ -18,16 +20,16 @@ EventDispatcher::~EventDispatcher() {
 
 int EventDispatcher::init() {
 	int ret = 0;
-	ret = epoll_.CreateHandle();
-	if (ret != 0) return -1;
-
-	ret = epoll_.AddFdEvent(listenfd_, EpollWrapper::READ_READY);
-	if (ret != 0) return -1;
+	if (!epoll_.CreateHandle()) 
+        return -1;
+	if(!epoll_.AddFdEvent(listenfd_, EpollWrapper::READ_READY))
+	    return -1;
 
 	return ret;
 }
 
 int EventDispatcher::loop() {
+    LOG_INFO("EventDispatcher LOOP");
 	while (!stop_) {
 		int events_num = epoll_.Poll();
 		for (int i = 0; i < events_num; ++i)

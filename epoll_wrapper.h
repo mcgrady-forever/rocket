@@ -25,9 +25,9 @@ public:
 	EpollWrapper();
 	virtual ~EpollWrapper();
 
-    int CreateHandle();
+    bool CreateHandle();
 	int DestroyHandle();	
-    int AddFdEvent(int fd, u_int events);	
+    bool AddFdEvent(int fd, u_int events);	
 	int DelFdEvent(int fd, u_int events);	
 	int ModifyFdEvent(int fd, u_int events);
 

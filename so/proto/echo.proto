@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+message EchoReq
+{
+    optional string echo = 1;
+}
+
+message EchoRsp
+{
+    optional string echo = 1;
+}

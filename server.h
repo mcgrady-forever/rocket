@@ -3,6 +3,8 @@
 
 #include <stdint.h>
 #include <string>
+#include <vector>
+#include "thread_wrapper.h"
 //#include <boost/asio.hpp>
 //#include <boost/noncopyable.hpp>
 //#include <boost/shared_ptr.hpp>
@@ -26,8 +28,9 @@ public:
     void stop();
     
 private:
-    int         thread_pool_size_;
-    uint32_t    port_;
+    int                           thread_pool_size_;
+    uint32_t                      port_;
+    std::vector<NetworkThread*>   threads_;
 };
 
 }

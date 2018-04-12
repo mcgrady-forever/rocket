@@ -1,6 +1,8 @@
 #include "server.h"
 
 #include <vector>
+#include "logger.h"
+#include "event_dispatcher.h"
 
 namespace rocket {
 
@@ -8,29 +10,28 @@ Server::Server(const uint32_t port,
                const int thread_pool_size/* = 1*/) 
     : port_(port),
       thread_pool_size_(thread_pool_size) {
-
+    LOG_INFO("Server::server");
 };
 
 void Server::run() {
-    /*
-    std::vector<boost::shared_ptr<boost::thread> > threads; 
-    for(std::size_t i = 0; i < thread_pool_size_; ++i)
-    {
-        boost::shared_ptr<boost::thread> thread(new boost::thread(
-            boost::bind(&boost::asio::io_service::run, &io_service_)));
-        threads.push_back(thread);
-    }
+    LOG_INFO("Server::run()");
 
-    for(std::size_t i = 0; i < threads.size(); ++i)
-    {
-        threads[i]->join();
+    for (int i = 0; i < thread_pool_size_; ++i) {
+        EventDispatcher event_dispatcher(port_);
+        NetworkThread* thread = new NetworkThread(std::bind(&EventDispatcher::loop, &event_dispatcher),
+                                                  event_dispatcher);
+        threads_.push_back(thread);
+        thread->start();
+        LOG_INFO("thread start i=%d, tid=%d", i, thread->thread_id());
     }
-    */
 }
 
 void Server::stop()
 {
-    //io_service_.stop();
+    for (auto it = threads_.begin(); it != threads_.end(); ++it) {
+        delete *it;
+        *it = NULL;
+    }
 }
 
 } // namespace rocket

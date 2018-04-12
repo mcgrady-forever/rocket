@@ -29,14 +29,14 @@ EpollWrapper::~EpollWrapper() {
     events_ = NULL;
 }
 
-int EpollWrapper::CreateHandle() {	
+bool EpollWrapper::CreateHandle() {	
     epollfd_ = epoll_create(MAX_EVENTS_NUM); //Since Linux 2.6.8, the size argument is ignored
     if (-1 == epollfd_) {    
         LOG_ERROR("CreateHandle error");
-        return -1;
+        return false;
     }
 
-    return epollfd_; 
+    return true; 
 }	
 
 int EpollWrapper::DestroyHandle() {	
@@ -49,13 +49,13 @@ int EpollWrapper::DestroyHandle() {
 	return false;
 }
 
-int EpollWrapper::AddFdEvent(int fd, u_int events) {
+bool EpollWrapper::AddFdEvent(int fd, u_int events) {
 	if (ctl(EPOLL_CTL_ADD, fd, events) == -1) {
 		LOG_ERROR("AddFdEvent error, fd=%d", fd);
-        return -1;
+        return false;
 	}
 	
-	return 0;
+	return true;
 }
 
 int EpollWrapper::DelFdEvent(int fd, u_int events) {

@@ -57,14 +57,19 @@ class NetworkThread : public ThreadBase
 {
 public:
 	NetworkThread(ThreadCallback cb, 
-			      const EventDispatcher& ev_dispatcher) 
+			      EventDispatcher* ev_dispatcher) 
 		: ThreadBase(cb)
 		, ev_dispatcher_(ev_dispatcher)
 	{};
-	~NetworkThread() {};
+	~NetworkThread() {
+		if (ev_dispatcher_ != NULL) {
+			delete ev_dispatcher_;
+			ev_dispatcher_ = NULL;
+		}
+	};
 
 private:
-	EventDispatcher ev_dispatcher_;
+	EventDispatcher* ev_dispatcher_;
 };
 
 }

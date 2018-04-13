@@ -38,6 +38,7 @@ int EventDispatcher::init() {
 int EventDispatcher::loop() {
     LOG_INFO("EventDispatcher LOOP");
 	while (!stop_) {
+        LOG_INFO("EventDispatcher LOOP1");
 		int events_num = epoll_.Poll();
 		for (int i = 0; i < events_num; ++i)
 		{

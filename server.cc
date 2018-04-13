@@ -38,9 +38,9 @@ void Server::run() {
     LOG_INFO("Server::run()");
 
     for (int i = 0; i < thread_pool_size_; ++i) {
-        EventDispatcher event_dispatcher(listenfd_);
+        EventDispatcher* event_dispatcher = new EventDispatcher(listenfd_);
         LOG_INFO("Server::run() 1");
-        NetworkThread* thread = new NetworkThread(std::bind(&EventDispatcher::loop, &event_dispatcher),
+        NetworkThread* thread = new NetworkThread(std::bind(&EventDispatcher::loop, event_dispatcher),
                                                   event_dispatcher);
         threads_.push_back(thread);
         thread->start();

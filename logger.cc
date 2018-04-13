@@ -30,6 +30,7 @@ public:
         {
             _initialized = false;
             int ret = pthread_mutex_destroy(&_mutex);
+            perror("pthread_mutex_destroy");
             assert(ret == 0);
         }
     }

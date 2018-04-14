@@ -34,7 +34,7 @@ private:
     int                           thread_pool_size_;
     uint32_t                      port_;
     int                           listenfd_;
-    std::vector<NetworkThread*>   threads_;
+    std::vector<ThreadBase*>      threads_;
 };
 
 }

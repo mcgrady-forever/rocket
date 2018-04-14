@@ -2,6 +2,7 @@
 #define _THREAD_WRAPPER_H_
 
 #include <functional>
+#include <iostream>
 #include "event_dispatcher.h"
 
 namespace rocket {
@@ -14,7 +15,8 @@ public:
 
 	ThreadBase(ThreadCallback cb) : cb_(cb), pthread_id_(0) { }
 
-	bool start() {		
+	bool start() {	
+		std::cout << "base.run" << std::endl;	
 		int ret = pthread_create(&pthread_id_, NULL, TheThread, this);	
 		return ret == 0 ? true : false;
 	}
@@ -22,6 +24,9 @@ public:
 	pthread_t thread_id() {
         return pthread_id_;
     }
+
+protected:
+	ThreadCallback cb_;
 
 private:
 	static void *TheThread(void *param) {
@@ -34,11 +39,11 @@ private:
 		return NULL;
 	}
 
-	void run() {
+	virtual void run() {
+		std::cout << "base.run" << std::endl;
 		cb_();
 	}
 
-	ThreadCallback cb_;
 	pthread_t pthread_id_;
 };
 
@@ -51,16 +56,17 @@ public:
 	~WorkThread() {};
 
 private:
+
 };
 
 class NetworkThread : public ThreadBase
 {
 public:
-	NetworkThread(ThreadCallback cb, 
+	NetworkThread(/*ThreadCallback cb,*/ 
 			      EventDispatcher* ev_dispatcher) 
-		: ThreadBase(cb)
-		, ev_dispatcher_(ev_dispatcher)
-	{};
+		: ThreadBase(std::bind(&EventDispatcher::loop, ev_dispatcher))
+		, ev_dispatcher_(ev_dispatcher) {
+	};
 	~NetworkThread() {
 		if (ev_dispatcher_ != NULL) {
 			delete ev_dispatcher_;
@@ -68,8 +74,19 @@ public:
 		}
 	};
 
+	/*
+	bool start() {
+		_thread.start();
+	}
+	*/
+
+	virtual void run() {
+		std::cout << "Derived.run" << std::endl;
+		cb_();
+	}
 private:
 	EventDispatcher* ev_dispatcher_;
+	//ThreadBase _thread;
 };
 
 }

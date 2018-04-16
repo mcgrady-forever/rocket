@@ -203,5 +203,9 @@ int main(int argc, char* argv[])
     Server s(port, thread_pool_size);
     s.run();
 
+    while (true) {
+        usleep(1);
+    }
+
     return 0;
 }

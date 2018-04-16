@@ -147,6 +147,7 @@ extern "C" int rocket_handle_input(void* arg)
  */
 extern "C" int rocket_handle_process(void* arg)
 {
+    std::cout << "rocket_handle_process" << std::endl;
     blob_type* blob = (blob_type*) arg;
     Commu* c = (Commu*) blob->owner; // 通讯组件, 目前支持获取ip和port, 及发送回应
 

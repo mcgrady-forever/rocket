@@ -42,11 +42,12 @@ static void close(int socket);
 static bool setNonBlocking(int socket);
 
 //! Read text from the specified socket. Returns false on error.
-static bool nbRead(int socket, std::string& s, bool *eof);
+static bool nbRead(int socket, std::string& s, bool& eof);
 static int nbRead(int s, char* pData, unsigned &nLen, unsigned nTimeout = 0);
 
 //! Write text to the specified socket. Returns false on error.
 static bool nbWrite(int socket, std::string& s, int *bytesSoFar);
+static bool nbWrite(int fd, const char* s, int len, int *bytesSoFar);
 static int nbWrite(int s, const char* pData, unsigned &nLen, unsigned nTimeout = 0);
 
 

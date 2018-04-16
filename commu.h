@@ -1,7 +1,7 @@
 #ifndef _COMMU_H_
 #define _COMMU_H_
 
-namespace thunder {
+namespace rocket {
 
 // 数据blob
 struct blob_type
@@ -27,7 +27,7 @@ public:
     virtual int get_port() = 0;
 
     // 向客户端发送响应数据
-    virtual int write(char* buf, size_t len) = 0;
+    virtual int Write(char* buf, size_t len) = 0;
 };
 
 }  // namespace thunder

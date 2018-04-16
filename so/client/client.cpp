@@ -105,11 +105,14 @@ public:
         }
 
         ssize_t ret = write(_fd, buf, len);
-
         if (ret == -1)
         {
             DEBUGP("write error: %d, %s", errno, strerror(errno));
             return -1;
+        }
+        else
+        {
+            DEBUGP("write success: %d, %d", _fd, ret);
         }
 
         return 0;
@@ -192,6 +195,7 @@ int main(int argc, char **argv)
     for (int i = 0; i < nclients; i++)
     {
         client[i].Init(&addr, base);
+        usleep(10);
         client[i].Send();
     }
 

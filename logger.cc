@@ -14,66 +14,6 @@
 
 #define LOG_BUF_SIZE 2048
 
-class Mutex
-{
-public:
-    Mutex()
-    {
-        int ret = pthread_mutex_init(&_mutex, NULL);
-        assert(ret == 0);
-        _initialized = true;
-    }
-
-    ~Mutex()
-    {
-        if (_initialized)
-        {
-            _initialized = false;
-            int ret = pthread_mutex_destroy(&_mutex);
-            perror("pthread_mutex_destroy");
-            assert(ret == 0);
-        }
-    }
-
-    void lock()
-    {
-        int ret = pthread_mutex_lock(&_mutex);
-        assert(ret == 0);
-    }
-
-    void unlock()
-    {
-        int ret = pthread_mutex_unlock(&_mutex);
-        assert(ret == 0);
-    }
-
-private:
-    pthread_mutex_t _mutex;
-    bool _initialized;
-};
-
-class Guard
-{
-public:
-    Guard(Mutex& mutex) : _mutex(&mutex)
-    {
-        if (_mutex)
-        {
-            _mutex->lock();
-        }
-    }
-
-    ~Guard()
-    {
-        if (_mutex)
-        {
-            _mutex->unlock();
-        }
-    }
-
-private:
-    Mutex* _mutex;
-};
 
 int LogConfig::parseLevel(const std::string& level)
 {

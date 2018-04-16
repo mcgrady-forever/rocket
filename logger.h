@@ -1,6 +1,14 @@
 #ifndef _LOGGER_H
 #define _LOGGER_H
 
+#include <stdlib.h>
+#include <stdio.h>
+#include <errno.h>
+#include <stdarg.h>
+#include <string.h>
+#include <pthread.h>
+#include <cassert>
+
 #include <string>
 
 #define LOGGER Logger::getLogger()
@@ -22,6 +30,70 @@ enum LOG_ROTATE
     ROTATE_DAILY = 0,
     ROTATE_WEEKLY,
     ROTATE_MONTHLY,
+};
+
+class Mutex
+{
+public:
+    Mutex()
+    {
+        int ret = pthread_mutex_init(&_mutex, NULL);
+        assert(ret == 0);
+        _initialized = true;
+    }
+
+    ~Mutex()
+    {
+        if (_initialized)
+        {
+            _initialized = false;
+            int ret = pthread_mutex_destroy(&_mutex);
+            perror("pthread_mutex_destroy");
+            printf("~Mutex ret=%d, %p\n", ret, this);
+            assert(ret == 0);
+        }
+    }
+
+    void lock()
+    {
+        int ret = pthread_mutex_lock(&_mutex);
+        assert(ret == 0);
+    }
+
+    void unlock()
+    {
+        int ret = pthread_mutex_unlock(&_mutex);
+        perror("pthread_mutex_unlock");
+        printf("~unlock ret=%d, %p\n", ret, this);
+        assert(ret == 0);
+    }
+
+private:
+    pthread_mutex_t _mutex;
+    bool _initialized;
+};
+
+class Guard
+{
+public:
+    Guard(Mutex& mutex) : _mutex(&mutex)
+    {
+        if (_mutex)
+        {
+            _mutex->lock();
+        }
+    }
+
+    ~Guard()
+    {
+        if (_mutex)
+        {
+            _mutex->unlock();
+        }
+    }
+
+private:
+    Mutex* _mutex;
 };
 
 struct LogConfig

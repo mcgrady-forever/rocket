@@ -1,4 +1,8 @@
 3rd/
 bin/
 log/
+so/*.o
+so/*.so
+*.o
+*.so
 

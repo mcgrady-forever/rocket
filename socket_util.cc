@@ -11,6 +11,8 @@
 # include <fcntl.h>
 # include <string.h>
 
+#include <iostream>
+
  
 namespace rocket {
 
@@ -171,33 +173,35 @@ BaseSocket::connectByIP(int socket, int port, const char* pIP)
 
 // Read available text from the specified socket. Returns false on error.
 bool 
-BaseSocket::nbRead(int fd, std::string& s, bool *eof)
+BaseSocket::nbRead(int fd, std::string& s, bool& eof)
 {
-  const int READ_SIZE = 4096;   // Number of bytes to attempt to read at a time
-  char readBuf[READ_SIZE];
+	std::cout << "nbRead begin" << std::endl;
+	const int READ_SIZE = 4096;   // Number of bytes to attempt to read at a time
+	char readBuf[READ_SIZE];
 
-  bool wouldBlock = false;
-  *eof = false;
+	bool wouldBlock = false;
+	eof = false;
 
-  while ( ! wouldBlock && ! *eof) {
-#if defined(WIN32)
-    int n = recv(fd, readBuf, READ_SIZE-1, 0);
-#else
-    int n = read(fd, readBuf, READ_SIZE-1);
-#endif
+	while ( !wouldBlock && !eof) {
+	#if defined(WIN32)
+		int n = recv(fd, readBuf, READ_SIZE-1, 0);
+	#else
+		int n = read(fd, readBuf, READ_SIZE-1);
+	#endif
 
-    if (n > 0) {
-      readBuf[n] = 0;
-      s.append(readBuf, n);
-    } else if (n == 0) {
-      *eof = true;
-    } else if (nonFatalError()) {
-      wouldBlock = true;
-    } else {
-      return false;   // Error
-    }
-  }
-  return true;
+		if (n > 0) {
+			readBuf[n] = 0;
+		  	s.append(readBuf, n);
+		} else if (n == 0) {
+		  	eof = true;
+		} else if (nonFatalError()) {
+		  	wouldBlock = true;
+		} else {
+		  	return false;   // Error
+		}
+	}
+	std::cout << "nbRead end" << std::endl;
+	return true;
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -273,7 +277,7 @@ BaseSocket::nbRead(int s, char* pData, unsigned &nLen, unsigned nTimeout/* = 0*/
 					if (iRes == 1)
 					{
 						if (FD_ISSET(s, fds))
-							break; //�ɶ��ˣ����¶�ȡ
+							break;
 					}
 					else if (iRes == SOCKET_ERROR)
 					{
@@ -329,16 +333,43 @@ BaseSocket::nbWrite(int fd, std::string& s, int *bytesSoFar)
   return true;
 }
 
+bool 
+BaseSocket::nbWrite(int fd, const char* s, int len, int *bytesSoFar)
+{
+	int nToWrite = len - *bytesSoFar;
+	char *sp = const_cast<char*>(s) + *bytesSoFar;
+	bool wouldBlock = false;
+
+	while ( nToWrite > 0 && ! wouldBlock ) {
+#if defined(WIN32)
+		int n = send(fd, sp, nToWrite, 0);
+#else
+		int n = write(fd, sp, nToWrite);
+#endif
+
+		if (n > 0) {
+		  sp += n;
+		  *bytesSoFar += n;
+		  nToWrite -= n;
+		} else if (nonFatalError()) {
+		  wouldBlock = true;
+		} else {
+		  return false;   // Error
+		}
+	}
+	return true;
+}
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 int 
 BaseSocket::nbWrite(int s, const char* pData, unsigned &nLen, unsigned nTimeout /*= 0*/)
 {
 	if (s == (int)INVALID_SOCKET)
-		return SOCKET_ERROR_DISCONNECTED; //������Ч
+		return SOCKET_ERROR_DISCONNECTED;
 
 	if ((!pData) || (nLen == 0))
-		return SOCKET_ERROR_PARAM; //������Ч
+		return SOCKET_ERROR_PARAM;
 
 	int iSend = 0;
 	unsigned nSend = 0;

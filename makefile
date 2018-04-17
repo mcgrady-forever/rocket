@@ -1,7 +1,8 @@
 CXX = g++
 CXXFLAGS = -std=c++11 -g -O2 -Wall -fPIC -fno-threadsafe-statics
 
-INC = -I./3rd/glog/include
+INC = -I./3rd/glog/include \
+	  -I./include
 
 LIB = -L./3rd/glog/lib -lglog \
       -ldl\

@@ -11,11 +11,10 @@ namespace rocket {
 // 连接信息
 class Connection : public Commu
 {
-private:
+public:
     Connection(int fd = -1, const std::string& ip = "", int port = 0, unsigned flow = 0);
     virtual ~Connection();
 
-public:
     int get_fd() { return fd_; }
 
     virtual std::string get_ip() { return ip_; }

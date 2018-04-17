@@ -187,7 +187,7 @@ extern "C" int rocket_handle_process(void* arg)
             }
 
             // 写回应
-            c->Write(buf, len);
+            c->Write(0, buf, len);
 
             delete[] buf;
 

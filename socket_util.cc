@@ -336,6 +336,7 @@ BaseSocket::nbWrite(int fd, std::string& s, int *bytesSoFar)
 bool 
 BaseSocket::nbWrite(int fd, const char* s, int len, int *bytesSoFar)
 {
+	std::cout << "write=" << len << std::endl;
 	int nToWrite = len - *bytesSoFar;
 	char *sp = const_cast<char*>(s) + *bytesSoFar;
 	bool wouldBlock = false;
@@ -345,6 +346,8 @@ BaseSocket::nbWrite(int fd, const char* s, int len, int *bytesSoFar)
 		int n = send(fd, sp, nToWrite, 0);
 #else
 		int n = write(fd, sp, nToWrite);
+		perror("nbWrite write");
+		std::cout << "write=" << n << std::endl;
 #endif
 
 		if (n > 0) {

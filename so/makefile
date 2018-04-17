@@ -11,7 +11,8 @@ LIB = -L../3rd/libevent-2.0.23/lib -levent \
 INC = -I../3rd/libevent-2.0.23/include \
       -I../3rd/protobuf-2.6.1/include \
       -I../3rd/ringlog/include \
-      -I. -I./proto -I../include
+      -I../include \
+      -I. -I./proto
 
 OBJS = $(patsubst %.cpp, %.o, $(wildcard *.cpp)) \
        $(patsubst %.cc,  %.o, $(wildcard proto/*.cc)) \

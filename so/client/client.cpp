@@ -120,6 +120,7 @@ public:
 
     static void readcb(int fd, short eventis, void* arg)
     {
+        DEBUGP("readcb");
         Client* client = (Client *)arg;
         char buf[BUF_SIZE];
         time_t cur;

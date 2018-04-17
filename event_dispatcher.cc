@@ -9,6 +9,7 @@
 #include "socket_util.h"
 #include "commu.h"
 #include "load_so.h"
+#include "connection.h"
 
 namespace rocket {
 
@@ -78,6 +79,7 @@ void EventDispatcher::ProcessEvents(int fd, u_int events) {
             } else {
                 LOG_DEBUG("ProcessEvents READ EVENT, infd=%d, fd=%d, port=%d, ip=%s",
                           infd, fd, port, ip.c_str());
+                BaseSocket::setNonBlocking(infd);
                 if(!epoll_.AddFdEvent(infd, EpollWrapper::READ_READY)) {
                     LOG_ERROR("ProcessEvents READ EVENT, infd=%d, fd=%d, port=%d, ip=%s",
                               infd, fd, port, ip.c_str());
@@ -93,9 +95,10 @@ void EventDispatcher::ProcessEvents(int fd, u_int events) {
             LOG_DEBUG("ProcessEvents READ EVENT, fd=%d read_buffer.size=%d", 
                       fd, read_buffer.size());
             
+            Commu* c = new Connection(fd);
             blob_type blob;
             blob.len = read_buffer.size();
-            blob.owner = this;
+            blob.owner = c;
             blob.data = new char[read_buffer.size()];
             memcpy(blob.data, read_buffer.c_str(), read_buffer.size());
 
@@ -106,14 +109,16 @@ void EventDispatcher::ProcessEvents(int fd, u_int events) {
                 LOG_DEBUG("ProcessEvents READ EVENT 1, fd=%d read_buffer.size=%d", 
                       fd, read_buffer.size());
                 // 处理请求
-                rocket_dll.rocket_handle_input(&blob);
+                rocket_dll.rocket_handle_process(&blob);
             }
             else
             {
                 std::cout << "rocket_handle_input error" << std::endl;
             }
+
             delete[] blob.data ;
-            
+            delete c;
+            c = NULL;
         }
     }
 

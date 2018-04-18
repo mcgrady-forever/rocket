@@ -26,6 +26,9 @@ public:
     // 获取客户端port
     virtual int get_port() = 0;
 
+    // get fd
+    virtual int get_fd() = 0;
+
     // 向客户端发送响应数据
     virtual int Write(unsigned flow, const char* buf, size_t len) = 0;
 };

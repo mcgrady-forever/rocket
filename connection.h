@@ -34,8 +34,8 @@ private:
 class ConnectionQueue
 {
 public:
-    ConnectionQueue();
-    ~ConnectionQueue();
+    ConnectionQueue() {};
+    ~ConnectionQueue() {};
 
     void push_front(Connection* c) {
         Lock Lock(mutex_);

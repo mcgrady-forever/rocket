@@ -47,6 +47,7 @@ private:
 	pthread_t pthread_id_;
 };
 
+// handle business data
 class WorkThread : public ThreadBase
 {
 public:
@@ -59,6 +60,7 @@ private:
 
 };
 
+// handle network connection
 class NetworkThread : public ThreadBase
 {
 public:

@@ -1,11 +1,11 @@
 CXX = g++
-CXXFLAGS = -g -Wall
+CXXFLAGS = -std=c++0x -g -Wall
 
 all: clean test client
 
-INC = -I. -I.. -I../proto -I../../include -I../../3rd/protobuf-2.6.1/include -I../../3rd/libevent-2.0.23/include
+INC = -I. -I.. -I../proto -I../../include -I../../3rd/libevent-2.0.23/include
 
-LIB = -L../../3rd/protobuf-2.6.1/lib -lprotobuf -L../../3rd/libevent-2.0.23/lib -levent -lrt
+LIB = -lprotobuf -L../../3rd/libevent-2.0.23/lib -levent -lrt
 
 test_OBJS = test.o sock.o ../msg.o ../proto/echo.pb.o
 

@@ -43,7 +43,7 @@ void Server::run() {
 
     // start network thread
     for (int i = 0; i < network_threads_num_; ++i) {
-        EventDispatcher* event_dispatcher = new EventDispatcher(listenfd_);
+        EventDispatcher* event_dispatcher = new EventDispatcher(this, listenfd_);
         LOG_INFO("Server::run() 1");
         ThreadBase* thread = new NetworkThread(/*std::bind(&EventDispatcher::loop, thread),*/
                                                   event_dispatcher);
@@ -75,6 +75,7 @@ void Server::stop() {
 
 void Server::WorkThreadFunc() {
     while(!stop_) {
+        LOG_DEBUG("WorkThreadFunc begin");
         connection_que_ev_.WaitAlways();
         Commu* c  = connection_que_.pop_front();;
         int fd = c->get_fd();
@@ -92,7 +93,7 @@ void Server::WorkThreadFunc() {
         // 检查数据包完整性
         int pktlen = rocket_dll.rocket_handle_input(&blob);
         if (pktlen > 0) {
-            LOG_DEBUG("ProcessEvents READ EVENT 1, fd=%d read_buffer.size=%d", 
+            LOG_DEBUG("WorkThreadFunc rocket_handle_input, fd=%d read_buffer.size=%d", 
                   fd, read_buffer.size());
             // 处理请求
             rocket_dll.rocket_handle_process(&blob);
@@ -103,6 +104,9 @@ void Server::WorkThreadFunc() {
         delete[] blob.data;
         delete c;
         c = NULL;
+
+        LOG_DEBUG("WorkThreadFunc end, fd=%d read_buffer.size=%d", 
+                  fd, read_buffer.size());
     }
 }
 

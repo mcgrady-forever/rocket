@@ -35,8 +35,8 @@ public:
 
     void WorkThreadFunc();
 
-    static void ReadCallback(int fd);
-    static void WriteCallback(int fd);
+    void ReadCallback(int fd);
+    void WriteCallback(int fd);
     
 private:
     int                           network_threads_num_;
@@ -47,8 +47,8 @@ private:
     std::vector<ThreadBase*>      work_threads_;
     volatile bool                 stop_;
 
-    static ConnectionQueue               connection_que_;
-    static EventWrapper                  connection_que_ev_;
+    ConnectionQueue               connection_que_;
+    EventWrapper                  connection_que_ev_;
 };
 
 }

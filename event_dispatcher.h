@@ -6,11 +6,12 @@
 
 namespace rocket {
 
+class Server;
 
 class EventDispatcher
 {
 public:
-	EventDispatcher(const int listenfd);
+	EventDispatcher(Server* s, const int listenfd);
 	~EventDispatcher();
 	
 	int init();
@@ -21,6 +22,7 @@ private:
 	void ProcessEvents(int fd, u_int events);
 
 private:
+	Server*       server_;
 	uint32_t    		listenfd_;
 	EpollWrapper 		epoll_;
 	int 				epollfd_;

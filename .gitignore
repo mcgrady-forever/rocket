@@ -5,4 +5,4 @@ so/*.o
 so/*.so
 *.o
 *.so
-
+*.out

@@ -14,8 +14,9 @@
 
 namespace rocket {
 
-EventDispatcher::EventDispatcher(const int listenfd) 
+EventDispatcher::EventDispatcher(Server* s, const int listenfd) 
 	: listenfd_(listenfd)
+    , server_(s)
     , stop_(false) {
     LOG_INFO("EventDispatcher");
 	if (init() != 0)
@@ -86,7 +87,7 @@ void EventDispatcher::ProcessEvents(int fd, u_int events) {
                 }
             } 
         } else {
-            Server::ReadCallback(fd);
+            server_->ReadCallback(fd);
 
             /*
             LOG_DEBUG("ProcessEvents READ EVENT, fd=%d", fd);

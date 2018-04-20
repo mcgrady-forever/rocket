@@ -16,8 +16,10 @@ public:
 	ThreadBase(ThreadCallback cb) : cb_(cb), pthread_id_(0) { }
 
 	bool start() {	
-		std::cout << "base.run" << std::endl;	
-		int ret = pthread_create(&pthread_id_, NULL, TheThread, this);	
+		int ret = pthread_create(&pthread_id_, NULL, TheThread, this);
+		std::cout << "ThreadBase start, ret=" << ret 
+				  << " tid=" << pthread_id_
+				  << std::endl;	
 		return ret == 0 ? true : false;
 	}
 
@@ -30,9 +32,9 @@ protected:
 
 private:
 	static void *TheThread(void *param) {
-		pthread_detach(pthread_self());
-		pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, NULL);
-		pthread_setcanceltype(PTHREAD_CANCEL_DEFERRED, NULL);
+		//pthread_detach(pthread_self());
+		//pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, NULL);
+		//pthread_setcanceltype(PTHREAD_CANCEL_DEFERRED, NULL);
 	
 		((ThreadBase*)param)->run();
 
@@ -40,7 +42,7 @@ private:
 	}
 
 	virtual void run() {
-		std::cout << "base.run" << std::endl;
+		std::cout << "ThreadBase run" << std::endl;
 		cb_();
 	}
 
@@ -56,6 +58,10 @@ public:
 	{};
 	~WorkThread() {};
 
+	virtual void run() {
+		std::cout << "WorkThread run" << std::endl;
+		cb_();
+	}
 private:
 
 };
@@ -83,7 +89,7 @@ public:
 	*/
 
 	virtual void run() {
-		std::cout << "Derived.run" << std::endl;
+		std::cout << "NetworkThread run" << std::endl;
 		cb_();
 	}
 private:

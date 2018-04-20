@@ -49,7 +49,7 @@ int EventDispatcher::init() {
 int EventDispatcher::loop() {
     printf("EventDispatcher LOOP\n");
 	while (!stop_) {
-        printf("EventDispatcher LOOP1\n");
+        //printf("EventDispatcher LOOP1\n");
 		int events_num = epoll_.Poll();
 		for (int i = 0; i < events_num; ++i) {
             int fd = -1;

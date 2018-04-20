@@ -22,7 +22,7 @@ private:
 	void ProcessEvents(int fd, u_int events);
 
 private:
-	Server*       server_;
+	Server*       		server_;
 	uint32_t    		listenfd_;
 	EpollWrapper 		epoll_;
 	int 				epollfd_;

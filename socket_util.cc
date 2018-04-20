@@ -204,8 +204,6 @@ BaseSocket::nbRead(int fd, std::string& s, bool& eof)
 	return true;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////
-//nlen ����ʵ�ʶ�ȡ���ֽ���
 int 
 BaseSocket::nbRead(int s, char* pData, unsigned &nLen, unsigned nTimeout/* = 0*/)
 {
@@ -223,8 +221,8 @@ BaseSocket::nbRead(int s, char* pData, unsigned &nLen, unsigned nTimeout/* = 0*/
 	
 	fd_set fds[1];
 	timeval timeout;
-	timeout.tv_sec = SOCKET_TIMEOUT_SELECT;
-	timeout.tv_usec = 0;
+	timeout.tv_sec = 0;
+	timeout.tv_usec = nTimeout * 1000;
 	
 	int iRes = 0;
 	time_t curTime = 0;
@@ -248,8 +246,6 @@ BaseSocket::nbRead(int s, char* pData, unsigned &nLen, unsigned nTimeout/* = 0*/
 		else if (iRecv == SOCKET_ERROR)
 		{
 			int ret = getError();
-			//printf("error:%d", ret);
-			//fflush(stdout);
 			if (ret != EWOULDBLOCK )
 			{
 				iRet = SOCKET_ERROR_DISCONNECTED;
@@ -257,13 +253,6 @@ BaseSocket::nbRead(int s, char* pData, unsigned &nLen, unsigned nTimeout/* = 0*/
 			}
 			else
 			{
-// 				if ( nRecved > 0 )
-// 				{
-// 					iRet = SOCKET_ERROR_DISCONNECTED;
-// 					goto Ext;
-// 				}
-// 				iRecv = read(s, pData + nRecved, nLen - nRecved);
-// 				printf("error:%d, iRecv :%d\n", ret, iRecv);
 				time_t curTime = time(NULL);
 				while ((unsigned)(curTime - begin) < nTimeout)
 				{

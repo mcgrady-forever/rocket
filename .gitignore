@@ -6,3 +6,5 @@ so/*.so
 *.o
 *.so
 *.out
+*.pid
+

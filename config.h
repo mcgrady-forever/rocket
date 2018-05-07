@@ -20,6 +20,7 @@ public:
     int _work_nthreads;
     int _timeout;
     bool _enable_thread_name;
+    bool _daemonize;
 
     std::string _app_so;
     std::string _app_conf;

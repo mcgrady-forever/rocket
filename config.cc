@@ -19,7 +19,7 @@ bool Config::load(const char* file)
     // log config
     std::string level = cr.GetString("log", "level", "debug");
     std::string rotate = cr.GetString("log", "rotate", "daily");
-        _log_cfg.level = _log_cfg.parseLevel(level);
+    _log_cfg.level = _log_cfg.parseLevel(level);
     _log_cfg.rotate = _log_cfg.parseRotate(rotate);
     _log_cfg.file = cr.GetString("log", "file", "./log/ff.log");
     _log_cfg.size = cr.GetNumber<size_t>("log", "size", 104857600);
@@ -53,6 +53,8 @@ bool Config::load(const char* file)
     }
 
     _enable_thread_name = cr.GetBool("server", "enable_thread_name", false);
+
+    _daemonize = cr.GetBool("server", "daemonize", false);
 
     // app config
     _app_so = cr["app.so"];

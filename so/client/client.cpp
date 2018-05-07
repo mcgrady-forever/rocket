@@ -134,6 +134,12 @@ public:
             close(fd);
             DEBUGP("read error: %d, %s", errno, strerror(errno));
             return;
+        } 
+        else if (0 == ret)
+        {
+            close(fd);
+            DEBUGP("read end: %d, %s", errno, strerror(errno));
+            return;
         }
 
         Msg msg;

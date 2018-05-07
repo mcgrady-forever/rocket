@@ -42,22 +42,21 @@ int Server::init() {
 
 void Server::run() {
     LOG_INFO("Server::run()");
+    // start network thread
+    EventDispatcher* event_dispatcher = new EventDispatcher(this, listenfd_);
+    //LOG_INFO("Server::run() 1");
+    ThreadBase* thread = new NetworkThread(event_dispatcher);
+    network_threads_.push_back(thread);
+    thread->start();
+    LOG_INFO("network thread start, tid=%d", thread->thread_id());
+
+
     // start work thread
     for (int i = 0; i < work_threads_num_; ++i) {
         ThreadBase* thread = new WorkThread(std::bind(&Server::WorkThreadFunc, this));
         work_threads_.push_back(thread);
         thread->start();
         LOG_INFO("work thread start i=%d, tid=%d", i, thread->thread_id());
-    }
-
-    // start network thread
-    for (int i = 0; i < network_threads_num_; ++i) {
-        EventDispatcher* event_dispatcher = new EventDispatcher(this, listenfd_);
-        //LOG_INFO("Server::run() 1");
-        ThreadBase* thread = new NetworkThread(event_dispatcher);
-        network_threads_.push_back(thread);
-        thread->start();
-        LOG_INFO("network thread start i=%d, tid=%d", i, thread->thread_id());
     }
 }
 
@@ -106,7 +105,7 @@ void Server::WorkThreadFunc() {
         delete[] blob.data;
         delete c;
         c = NULL;
-
+        BaseSocket::close(fd);
         LOG_DEBUG("WorkThreadFunc end, fd=%d read_buffer.size=%d", 
                   fd, read_buffer.size());
     }

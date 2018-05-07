@@ -68,23 +68,32 @@ void EventDispatcher::ProcessEvents(int fd, u_int events) {
     // handle read event
     if(epoll_.is_read(events)) {
         if (fd == listenfd_) {
-            int port;
-            std::string ip;
-            int infd;
-            infd = BaseSocket::accept(fd, ip, port);
-            if (infd == -1) {
-                perror("accept error");
-                LOG_DEBUG("ProcessEvents READ EVENT, listenfd is readable, infd=%d, fd=%d",
-                          infd, fd);
-            } else {
-                LOG_DEBUG("ProcessEvents READ EVENT, infd=%d, fd=%d, port=%d, ip=%s",
-                          infd, fd, port, ip.c_str());
-                BaseSocket::setNonBlocking(infd);
-                if(!epoll_.AddFdEvent(infd, EpollWrapper::READ_READY)) {
-                    LOG_ERROR("ProcessEvents READ EVENT, infd=%d, fd=%d, port=%d, ip=%s",
+            int accept_cnt_tcp = 50;
+
+            // 每次poll 最多建立50个连接
+            /*while (accept_cnt_tcp --)*/ {
+                int port;
+                std::string ip;
+                int infd;
+                infd = BaseSocket::accept(fd, ip, port);
+                if (infd == -1 && (errno == EAGAIN)) {
+                    //break;
+                } else if (infd == -1 && (errno == EINTR)) {
+                    //continue;
+                } else if (infd == -1) {
+                    perror("accept error");
+                    LOG_DEBUG("ProcessEvents READ EVENT, listenfd is readable, infd=%d, fd=%d",
+                              infd, fd);
+                } else {
+                    LOG_DEBUG("ProcessEvents READ EVENT, infd=%d, fd=%d, port=%d, ip=%s",
                               infd, fd, port, ip.c_str());
-                    return;
-                }
+                    BaseSocket::setNonBlocking(infd);
+                    if(!epoll_.AddFdEvent(infd, EpollWrapper::READ_READY)) {
+                        LOG_ERROR("ProcessEvents READ EVENT, infd=%d, fd=%d, port=%d, ip=%s",
+                                  infd, fd, port, ip.c_str());
+                        return;
+                    }
+                } 
             } 
         } else {
             server_->ReadCallback(fd);

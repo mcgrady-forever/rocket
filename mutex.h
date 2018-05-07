@@ -20,7 +20,7 @@ public:
         {
             initialized_ = false;
             int ret = pthread_mutex_destroy(&mutex_);
-            perror("pthread_mutex_destroy");
+            //perror("pthread_mutex_destroy");
             assert(ret == 0);
         }
     }
@@ -34,7 +34,7 @@ public:
     void unlock()
     {
         int ret = pthread_mutex_unlock(&mutex_);
-        perror("pthread_mutex_unlock");
+        //perror("pthread_mutex_unlock");
         assert(ret == 0);
     }
 

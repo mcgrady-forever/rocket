@@ -26,6 +26,8 @@ static const char *opt_config = NULL;
 
 static bool do_daemonize = false;
 
+static const char *CONFIG_DEFAULT_PID_FILE = "rocket.pid";
+
 void usage_exit(const char *program, int status)
 {
     FILE *stream = status != 0 ? stderr : stdout;
@@ -99,8 +101,7 @@ int parse_options(int argc, char **argv)
     return 0;
 }
 
-int daemonize()
-{
+int daemonize() {
     int fd;
 
     switch (fork()) {
@@ -112,6 +113,9 @@ int daemonize()
             _exit(EXIT_SUCCESS);
     }
 
+    /* creates a new session if the calling process is not a process group leader.
+       https://linux.die.net/man/2/setsid
+    */
     if (setsid() == -1)
         return -1;
 
@@ -138,6 +142,15 @@ int daemonize()
         }
     }
     return (0);
+}
+
+void createPidFile(void) {
+    /* Try to write the pid file in a best-effort way. */
+    FILE *fp = fopen(CONFIG_DEFAULT_PID_FILE,"w");
+    if (fp) {
+        fprintf(fp,"%d\n",(int)getpid());
+        fclose(fp);
+    }
 }
 
 int main(int argc, char* argv[])
@@ -191,11 +204,24 @@ int main(int argc, char* argv[])
         exit(EXIT_FAILURE);
     }
 
+    // run as daemon if daemonize is set true
+    if (do_daemonize)
+    {
+        if (daemonize() == -1)
+        {
+            fprintf(stderr, "failed to daemonize\n");
+            exit(EXIT_FAILURE);
+        }
+    }
+
+    //create pid file
+    createPidFile();
+
     short port = cfg._port;
     std::size_t thread_pool_size = cfg._net_nthreads;
 
     /*
-    boost::asio::io_service io_service;
+    boost::asio::io_gservice io_service;
     Server s(io_service, port, thread_pool_size);
     io_service.run();
     */

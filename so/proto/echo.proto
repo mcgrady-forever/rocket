@@ -1,4 +1,4 @@
-syntax = "proto2";
+package rocket.test;
 
 message EchoReq
 {

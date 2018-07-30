@@ -16,6 +16,9 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 
+namespace rocket {
+namespace test {
+
 namespace {
 
 const ::google::protobuf::Descriptor* EchoReq_descriptor_ = NULL;
@@ -98,8 +101,8 @@ void protobuf_AddDesc_echo_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\necho.proto\"\027\n\007EchoReq\022\014\n\004echo\030\001 \001(\t\"\027\n"
-    "\007EchoRsp\022\014\n\004echo\030\001 \001(\t", 62);
+    "\n\necho.proto\022\013rocket.test\"\027\n\007EchoReq\022\014\n\004"
+    "echo\030\001 \001(\t\"\027\n\007EchoRsp\022\014\n\004echo\030\001 \001(\t", 75);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "echo.proto", &protobuf_RegisterTypes);
   EchoReq::default_instance_ = new EchoReq();
@@ -125,7 +128,7 @@ const int EchoReq::kEchoFieldNumber;
 EchoReq::EchoReq()
   : ::google::protobuf::Message() {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:EchoReq)
+  // @@protoc_insertion_point(constructor:rocket.test.EchoReq)
 }
 
 void EchoReq::InitAsDefaultInstance() {
@@ -135,7 +138,7 @@ EchoReq::EchoReq(const EchoReq& from)
   : ::google::protobuf::Message() {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:EchoReq)
+  // @@protoc_insertion_point(copy_constructor:rocket.test.EchoReq)
 }
 
 void EchoReq::SharedCtor() {
@@ -146,7 +149,7 @@ void EchoReq::SharedCtor() {
 }
 
 EchoReq::~EchoReq() {
-  // @@protoc_insertion_point(destructor:EchoReq)
+  // @@protoc_insertion_point(destructor:rocket.test.EchoReq)
   SharedDtor();
 }
 
@@ -193,7 +196,7 @@ bool EchoReq::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:EchoReq)
+  // @@protoc_insertion_point(parse_start:rocket.test.EchoReq)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
@@ -229,17 +232,17 @@ bool EchoReq::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:EchoReq)
+  // @@protoc_insertion_point(parse_success:rocket.test.EchoReq)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:EchoReq)
+  // @@protoc_insertion_point(parse_failure:rocket.test.EchoReq)
   return false;
 #undef DO_
 }
 
 void EchoReq::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:EchoReq)
+  // @@protoc_insertion_point(serialize_start:rocket.test.EchoReq)
   // optional string echo = 1;
   if (has_echo()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
@@ -254,12 +257,12 @@ void EchoReq::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:EchoReq)
+  // @@protoc_insertion_point(serialize_end:rocket.test.EchoReq)
 }
 
 ::google::protobuf::uint8* EchoReq::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:EchoReq)
+  // @@protoc_insertion_point(serialize_to_array_start:rocket.test.EchoReq)
   // optional string echo = 1;
   if (has_echo()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
@@ -275,7 +278,7 @@ void EchoReq::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:EchoReq)
+  // @@protoc_insertion_point(serialize_to_array_end:rocket.test.EchoReq)
   return target;
 }
 
@@ -368,7 +371,7 @@ const int EchoRsp::kEchoFieldNumber;
 EchoRsp::EchoRsp()
   : ::google::protobuf::Message() {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:EchoRsp)
+  // @@protoc_insertion_point(constructor:rocket.test.EchoRsp)
 }
 
 void EchoRsp::InitAsDefaultInstance() {
@@ -378,7 +381,7 @@ EchoRsp::EchoRsp(const EchoRsp& from)
   : ::google::protobuf::Message() {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:EchoRsp)
+  // @@protoc_insertion_point(copy_constructor:rocket.test.EchoRsp)
 }
 
 void EchoRsp::SharedCtor() {
@@ -389,7 +392,7 @@ void EchoRsp::SharedCtor() {
 }
 
 EchoRsp::~EchoRsp() {
-  // @@protoc_insertion_point(destructor:EchoRsp)
+  // @@protoc_insertion_point(destructor:rocket.test.EchoRsp)
   SharedDtor();
 }
 
@@ -436,7 +439,7 @@ bool EchoRsp::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:EchoRsp)
+  // @@protoc_insertion_point(parse_start:rocket.test.EchoRsp)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
@@ -472,17 +475,17 @@ bool EchoRsp::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:EchoRsp)
+  // @@protoc_insertion_point(parse_success:rocket.test.EchoRsp)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:EchoRsp)
+  // @@protoc_insertion_point(parse_failure:rocket.test.EchoRsp)
   return false;
 #undef DO_
 }
 
 void EchoRsp::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:EchoRsp)
+  // @@protoc_insertion_point(serialize_start:rocket.test.EchoRsp)
   // optional string echo = 1;
   if (has_echo()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
@@ -497,12 +500,12 @@ void EchoRsp::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:EchoRsp)
+  // @@protoc_insertion_point(serialize_end:rocket.test.EchoRsp)
 }
 
 ::google::protobuf::uint8* EchoRsp::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:EchoRsp)
+  // @@protoc_insertion_point(serialize_to_array_start:rocket.test.EchoRsp)
   // optional string echo = 1;
   if (has_echo()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
@@ -518,7 +521,7 @@ void EchoRsp::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:EchoRsp)
+  // @@protoc_insertion_point(serialize_to_array_end:rocket.test.EchoRsp)
   return target;
 }
 
@@ -603,5 +606,8 @@ void EchoRsp::Swap(EchoRsp* other) {
 
 
 // @@protoc_insertion_point(namespace_scope)
+
+}  // namespace test
+}  // namespace rocket
 
 // @@protoc_insertion_point(global_scope)

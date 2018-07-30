@@ -13,7 +13,7 @@ Msg::~Msg()
 {
     if (_msg)
     {
-        delete _msg;
+        //delete _msg;
         _msg = NULL;
     }
 }

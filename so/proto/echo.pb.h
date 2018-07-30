@@ -26,6 +26,9 @@
 #include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 
+namespace rocket {
+namespace test {
+
 // Internal implementation detail -- do not call these.
 void  protobuf_AddDesc_echo_2eproto();
 void protobuf_AssignDesc_echo_2eproto();
@@ -101,7 +104,7 @@ class EchoReq : public ::google::protobuf::Message {
   inline ::std::string* release_echo();
   inline void set_allocated_echo(::std::string* echo);
 
-  // @@protoc_insertion_point(class_scope:EchoReq)
+  // @@protoc_insertion_point(class_scope:rocket.test.EchoReq)
  private:
   inline void set_has_echo();
   inline void clear_has_echo();
@@ -185,7 +188,7 @@ class EchoRsp : public ::google::protobuf::Message {
   inline ::std::string* release_echo();
   inline void set_allocated_echo(::std::string* echo);
 
-  // @@protoc_insertion_point(class_scope:EchoRsp)
+  // @@protoc_insertion_point(class_scope:rocket.test.EchoRsp)
  private:
   inline void set_has_echo();
   inline void clear_has_echo();
@@ -226,7 +229,7 @@ inline void EchoReq::clear_echo() {
   clear_has_echo();
 }
 inline const ::std::string& EchoReq::echo() const {
-  // @@protoc_insertion_point(field_get:EchoReq.echo)
+  // @@protoc_insertion_point(field_get:rocket.test.EchoReq.echo)
   return *echo_;
 }
 inline void EchoReq::set_echo(const ::std::string& value) {
@@ -235,7 +238,7 @@ inline void EchoReq::set_echo(const ::std::string& value) {
     echo_ = new ::std::string;
   }
   echo_->assign(value);
-  // @@protoc_insertion_point(field_set:EchoReq.echo)
+  // @@protoc_insertion_point(field_set:rocket.test.EchoReq.echo)
 }
 inline void EchoReq::set_echo(const char* value) {
   set_has_echo();
@@ -243,7 +246,7 @@ inline void EchoReq::set_echo(const char* value) {
     echo_ = new ::std::string;
   }
   echo_->assign(value);
-  // @@protoc_insertion_point(field_set_char:EchoReq.echo)
+  // @@protoc_insertion_point(field_set_char:rocket.test.EchoReq.echo)
 }
 inline void EchoReq::set_echo(const char* value, size_t size) {
   set_has_echo();
@@ -251,14 +254,14 @@ inline void EchoReq::set_echo(const char* value, size_t size) {
     echo_ = new ::std::string;
   }
   echo_->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:EchoReq.echo)
+  // @@protoc_insertion_point(field_set_pointer:rocket.test.EchoReq.echo)
 }
 inline ::std::string* EchoReq::mutable_echo() {
   set_has_echo();
   if (echo_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
     echo_ = new ::std::string;
   }
-  // @@protoc_insertion_point(field_mutable:EchoReq.echo)
+  // @@protoc_insertion_point(field_mutable:rocket.test.EchoReq.echo)
   return echo_;
 }
 inline ::std::string* EchoReq::release_echo() {
@@ -282,7 +285,7 @@ inline void EchoReq::set_allocated_echo(::std::string* echo) {
     clear_has_echo();
     echo_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   }
-  // @@protoc_insertion_point(field_set_allocated:EchoReq.echo)
+  // @@protoc_insertion_point(field_set_allocated:rocket.test.EchoReq.echo)
 }
 
 // -------------------------------------------------------------------
@@ -306,7 +309,7 @@ inline void EchoRsp::clear_echo() {
   clear_has_echo();
 }
 inline const ::std::string& EchoRsp::echo() const {
-  // @@protoc_insertion_point(field_get:EchoRsp.echo)
+  // @@protoc_insertion_point(field_get:rocket.test.EchoRsp.echo)
   return *echo_;
 }
 inline void EchoRsp::set_echo(const ::std::string& value) {
@@ -315,7 +318,7 @@ inline void EchoRsp::set_echo(const ::std::string& value) {
     echo_ = new ::std::string;
   }
   echo_->assign(value);
-  // @@protoc_insertion_point(field_set:EchoRsp.echo)
+  // @@protoc_insertion_point(field_set:rocket.test.EchoRsp.echo)
 }
 inline void EchoRsp::set_echo(const char* value) {
   set_has_echo();
@@ -323,7 +326,7 @@ inline void EchoRsp::set_echo(const char* value) {
     echo_ = new ::std::string;
   }
   echo_->assign(value);
-  // @@protoc_insertion_point(field_set_char:EchoRsp.echo)
+  // @@protoc_insertion_point(field_set_char:rocket.test.EchoRsp.echo)
 }
 inline void EchoRsp::set_echo(const char* value, size_t size) {
   set_has_echo();
@@ -331,14 +334,14 @@ inline void EchoRsp::set_echo(const char* value, size_t size) {
     echo_ = new ::std::string;
   }
   echo_->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:EchoRsp.echo)
+  // @@protoc_insertion_point(field_set_pointer:rocket.test.EchoRsp.echo)
 }
 inline ::std::string* EchoRsp::mutable_echo() {
   set_has_echo();
   if (echo_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
     echo_ = new ::std::string;
   }
-  // @@protoc_insertion_point(field_mutable:EchoRsp.echo)
+  // @@protoc_insertion_point(field_mutable:rocket.test.EchoRsp.echo)
   return echo_;
 }
 inline ::std::string* EchoRsp::release_echo() {
@@ -362,11 +365,14 @@ inline void EchoRsp::set_allocated_echo(::std::string* echo) {
     clear_has_echo();
     echo_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   }
-  // @@protoc_insertion_point(field_set_allocated:EchoRsp.echo)
+  // @@protoc_insertion_point(field_set_allocated:rocket.test.EchoRsp.echo)
 }
 
 
 // @@protoc_insertion_point(namespace_scope)
+
+}  // namespace test
+}  // namespace rocket
 
 #ifndef SWIG
 namespace google {

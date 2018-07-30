@@ -37,6 +37,9 @@ int Server::init() {
     ret = BaseSocket::bind(listenfd_, port_);
     ret = BaseSocket::listen(listenfd_, INT_MAX);
 
+    
+    int* p = new int[10];
+
 	return ret;
 }
 

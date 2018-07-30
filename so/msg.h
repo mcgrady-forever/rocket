@@ -10,6 +10,7 @@
 using namespace std;
 using namespace hy_base;
 using namespace google::protobuf;
+using namespace rocket::test;
 
 enum
 {

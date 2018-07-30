@@ -11,6 +11,7 @@
 using namespace hy_base;
 using namespace std;
 using namespace rocket;
+using namespace rocket::test;
 
 //////////////////// app 自启线程实现定时器示例 ////////////////////
 

@@ -1,14 +1,16 @@
 CXX = g++
-CXXFLAGS = -std=c++11 -g -O2 -Wall -fPIC
+CXXFLAGS = -std=c++11 -g -O0 -Wall -fPIC
 
 SO = app.so
 
 LIB = -L../3rd/libevent-2.0.23/lib -levent \
       -L../3rd/ringlog/lib -lringlog \
-      -lprotobuf -lpthread -lrt
+      -L../3rd/protobuf-2.6.1/lib -lprotobuf \
+      -lpthread -lrt
 
 INC = -I../3rd/libevent-2.0.23/include \
       -I../3rd/ringlog/include \
+      -I../3rd/protobuf-2.6.1/include \
       -I../include \
       -I. -I./proto
 

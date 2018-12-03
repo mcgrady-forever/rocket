@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="rocket" targetName="consistent_hash_test" />
+      <config projectName="rocket" targetName="rocket_tcp_client_test" />
+      <config projectName="rocket" targetName="rocket_s" />
+      <config projectName="rocket" targetName="rocket_tcp_server_test" />
+      <config projectName="rocket" targetName="rocket_server" />
+      <config projectName="rocket" targetName="rocket" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug-Cygwin" CONFIG_NAME="Debug" TOOLCHAIN_NAME="Cygwin" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4f45906e-d2d1-4f8f-b1a6-c15961ba0ee8" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/a.pcap" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/command.h" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/conf/rocket.conf" afterPath="$PROJECT_DIR$/conf/rocket.conf" />
+      <change beforePath="$PROJECT_DIR$/config.cc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/config.h" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/config_reader.cc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/config_reader.h" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/connection.cc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/connection.h" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/end_point.cc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/end_point.h" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/epoll_wrapper.cc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/epoll_wrapper.h" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/event.h" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/event_dispatcher.cc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/event_dispatcher.h" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/event_dispatcher_new.cc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/event_dispatcher_new.h" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/event_poller.cc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/event_poller.h" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/event_wrapper.cc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/event_wrapper.h" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/include/commu.h" afterPath="$PROJECT_DIR$/include/commu.h" />
+      <change beforePath="$PROJECT_DIR$/ip_address.cc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ip_address.h" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/load_so.cc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/load_so.h" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/logger.cc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/logger.h" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/main.cc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/makefile" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/makefile.def" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mutex.h" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/rocket" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/rocket.dump" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/server.cc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/server.h" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/so/app.conf" afterPath="$PROJECT_DIR$/so/app.conf" />
+      <change beforePath="$PROJECT_DIR$/so/app.cpp" afterPath="$PROJECT_DIR$/so/app.cpp" />
+      <change beforePath="$PROJECT_DIR$/so/client/client" afterPath="$PROJECT_DIR$/so/client/client" />
+      <change beforePath="$PROJECT_DIR$/so/client/client.cpp" afterPath="$PROJECT_DIR$/so/client/client.cpp" />
+      <change beforePath="$PROJECT_DIR$/so/client/makefile" afterPath="$PROJECT_DIR$/so/client/makefile" />
+      <change beforePath="$PROJECT_DIR$/so/client/sock.cpp" afterPath="$PROJECT_DIR$/so/client/sock.cpp" />
+      <change beforePath="$PROJECT_DIR$/so/client/sock.h" afterPath="$PROJECT_DIR$/so/client/sock.h" />
+      <change beforePath="$PROJECT_DIR$/so/client/test" afterPath="$PROJECT_DIR$/so/client/test" />
+      <change beforePath="$PROJECT_DIR$/so/client/test.cpp" afterPath="$PROJECT_DIR$/so/client/test.cpp" />
+      <change beforePath="$PROJECT_DIR$/so/debug.h" afterPath="$PROJECT_DIR$/so/debug.h" />
+      <change beforePath="$PROJECT_DIR$/so/fileconfig.cpp" afterPath="$PROJECT_DIR$/so/fileconfig.cpp" />
+      <change beforePath="$PROJECT_DIR$/so/fileconfig.h" afterPath="$PROJECT_DIR$/so/fileconfig.h" />
+      <change beforePath="$PROJECT_DIR$/so/hy_header.h" afterPath="$PROJECT_DIR$/so/hy_header.h" />
+      <change beforePath="$PROJECT_DIR$/so/logger.cpp" afterPath="$PROJECT_DIR$/so/logger.cpp" />
+      <change beforePath="$PROJECT_DIR$/so/logger.h" afterPath="$PROJECT_DIR$/so/logger.h" />
+      <change beforePath="$PROJECT_DIR$/so/makefile" afterPath="$PROJECT_DIR$/so/makefile" />
+      <change beforePath="$PROJECT_DIR$/so/msg.cpp" afterPath="$PROJECT_DIR$/so/msg.cpp" />
+      <change beforePath="$PROJECT_DIR$/so/msg.h" afterPath="$PROJECT_DIR$/so/msg.h" />
+      <change beforePath="$PROJECT_DIR$/so/proto/echo.pb.cc" afterPath="$PROJECT_DIR$/so/proto/echo.pb.cc" />
+      <change beforePath="$PROJECT_DIR$/so/proto/echo.pb.h" afterPath="$PROJECT_DIR$/so/proto/echo.pb.h" />
+      <change beforePath="$PROJECT_DIR$/so/proto/echo.proto" afterPath="$PROJECT_DIR$/so/proto/echo.proto" />
+      <change beforePath="$PROJECT_DIR$/so/proto/makefile" afterPath="$PROJECT_DIR$/so/proto/makefile" />
+      <change beforePath="$PROJECT_DIR$/socket_util.cc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/socket_util.h" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/start.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tcp_callbacks.h" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tcp_options.h" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tcp_server.cc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tcp_server.h" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tcp_wrapper.cc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tcp_wrapper.h" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/makefile" afterPath="$PROJECT_DIR$/test/makefile" />
+      <change beforePath="$PROJECT_DIR$/test/util_unittest" afterPath="$PROJECT_DIR$/test/util_unittest" />
+      <change beforePath="$PROJECT_DIR$/test/util_unittest.cc" afterPath="$PROJECT_DIR$/test/util_unittest.cc" />
+      <change beforePath="$PROJECT_DIR$/test/util_unittest1" afterPath="$PROJECT_DIR$/test/util_unittest1" />
+      <change beforePath="$PROJECT_DIR$/test/util_unittest1.cc" afterPath="$PROJECT_DIR$/test/util_unittest1.cc" />
+      <change beforePath="$PROJECT_DIR$/thread_wrapper.h" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/util/config_reader.cpp" afterPath="$PROJECT_DIR$/util/config_reader.cpp" />
+      <change beforePath="$PROJECT_DIR$/valgrind.log" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/valgrind.sh" afterPath="" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <ignored path="$PROJECT_DIR$/cmake-build-debug-cygwin/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-Cygwin" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="608">
+              <caret line="32" column="51" lean-forward="false" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="epoll_event_poller_impl.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tcp/epoll_event_poller_impl.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1406">
+              <caret line="74" column="56" lean-forward="false" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="event_dispatcher.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tcp/event_dispatcher.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="969">
+              <caret line="51" column="19" lean-forward="false" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.cc" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bin/config.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="62" lean-forward="true" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/main.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3914">
+              <caret line="206" column="0" lean-forward="false" selection-start-line="206" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tcp_server_handler.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/tcp_server_handler.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="684">
+              <caret line="36" column="36" lean-forward="false" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+              <folding>
+                <element signature="e#115#134#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/base/log.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="798">
+              <caret line="42" column="10" lean-forward="false" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/base/log.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1520">
+              <caret line="80" column="17" lean-forward="false" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logger.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/logger.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="760">
+              <caret line="40" column="25" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+              <folding>
+                <element signature="e#37#56#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logger.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/logger.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1805">
+              <caret line="95" column="9" lean-forward="false" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>internal_event_pollerinfos_</find>
+      <find>_internal__event_pollerinfos</find>
+      <find>connections_</find>
+      <find>epoll_events_</find>
+      <find>pending_commands_</find>
+      <find>_name</find>
+      <find>sent_callback_</find>
+      <find>_worker_count</find>
+      <find>PROJECT_BINARY_DIR</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>_internal__event_pollerinfos</replace>
+      <replace>_internal_event_pollerinfos</replace>
+      <replace>_connections</replace>
+      <replace>_epoll_events</replace>
+      <replace>_pending_commands</replace>
+      <replace>_worker_count</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/base/random.h" />
+        <option value="$PROJECT_DIR$/src/base/random.cc" />
+        <option value="$PROJECT_DIR$/src/base/string_utils.cc" />
+        <option value="$PROJECT_DIR$/src/base/string_utils.h" />
+        <option value="$PROJECT_DIR$/src/base/string_utils_test.cc" />
+        <option value="$PROJECT_DIR$/src/base/socket.h" />
+        <option value="$PROJECT_DIR$/src/base/socket.cc" />
+        <option value="$PROJECT_DIR$/src/concurrency/spin_lock.cc" />
+        <option value="$PROJECT_DIR$/src/concurrency/task.h" />
+        <option value="$PROJECT_DIR$/src/concurrency/thread.cc" />
+        <option value="$PROJECT_DIR$/src/container/ring_buffer_test.cc" />
+        <option value="$PROJECT_DIR$/src/tcp/epoll_event_poller_impl.h" />
+        <option value="$PROJECT_DIR$/src/tcp/tcp_callbacks.h" />
+        <option value="$PROJECT_DIR$/src/tcp/event_poller.h" />
+        <option value="$PROJECT_DIR$/src/tcp/event_dispatcher.h" />
+        <option value="$PROJECT_DIR$/src/tcp/event_dispatcher.cc" />
+        <option value="$PROJECT_DIR$/src/tcp/event_poller.cc" />
+        <option value="$PROJECT_DIR$/src/tcp/ip_address.cc" />
+        <option value="$PROJECT_DIR$/src/tcp/listen_connection.h" />
+        <option value="$PROJECT_DIR$/src/tcp/listen_connection.cc" />
+        <option value="$PROJECT_DIR$/src/tcp/connection_base.h" />
+        <option value="$PROJECT_DIR$/src/tcp/tcp_options.h" />
+        <option value="$PROJECT_DIR$/bin/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/bin/tcp_server_handler.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/bin/conf/rocket.conf" />
+        <option value="$PROJECT_DIR$/src/concurrency/thread.h" />
+        <option value="$PROJECT_DIR$/src/tcp/epoll_event_poller_impl.cc" />
+        <option value="$PROJECT_DIR$/bin/main.cc" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="49" />
+    <option name="y" value="91" />
+    <option name="width" value="1266" />
+    <option name="height" value="766" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>C/C++</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="rocket" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.C/C++" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\shared\myspace\rocket\bin" />
+      <recent name="D:\shared\myspace\rocket\bin\so" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Build All">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug-Cygwin" RUN_TARGET_PROJECT_NAME="rocket" RUN_TARGET_NAME="rocket_server" EXPLICIT_BUILD_TARGET_NAME="all">
+      <envs />
+    </configuration>
+    <configuration name="consistent_hash_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="rocket" TARGET_NAME="consistent_hash_test" CONFIG_NAME="Debug-Cygwin" RUN_TARGET_PROJECT_NAME="rocket" RUN_TARGET_NAME="rocket_server">
+      <envs />
+    </configuration>
+    <configuration name="rocket" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="rocket" TARGET_NAME="rocket" CONFIG_NAME="Debug-Cygwin" RUN_TARGET_PROJECT_NAME="rocket" RUN_TARGET_NAME="rocket_server">
+      <envs />
+    </configuration>
+    <configuration name="rocket_s" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="rocket" TARGET_NAME="rocket_s" CONFIG_NAME="Debug-Cygwin" RUN_TARGET_PROJECT_NAME="rocket" RUN_TARGET_NAME="rocket_server">
+      <envs />
+    </configuration>
+    <configuration name="rocket_server" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="rocket" TARGET_NAME="rocket_server" CONFIG_NAME="Debug-Cygwin" RUN_TARGET_PROJECT_NAME="rocket" RUN_TARGET_NAME="rocket_server">
+      <envs />
+    </configuration>
+    <configuration name="rocket_tcp_client_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="rocket" TARGET_NAME="rocket_tcp_client_test" CONFIG_NAME="Debug-Cygwin" RUN_TARGET_PROJECT_NAME="rocket" RUN_TARGET_NAME="rocket_server">
+      <envs />
+    </configuration>
+    <configuration name="rocket_tcp_server_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="rocket" TARGET_NAME="rocket_tcp_server_test" CONFIG_NAME="Debug-Cygwin" RUN_TARGET_PROJECT_NAME="rocket" RUN_TARGET_NAME="rocket_server">
+      <envs />
+    </configuration>
+    <list size="7">
+      <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
+      <item index="1" class="java.lang.String" itemvalue="Application.consistent_hash_test" />
+      <item index="2" class="java.lang.String" itemvalue="Application.rocket" />
+      <item index="3" class="java.lang.String" itemvalue="Application.rocket_s" />
+      <item index="4" class="java.lang.String" itemvalue="Application.rocket_tcp_client_test" />
+      <item index="5" class="java.lang.String" itemvalue="Application.rocket_tcp_server_test" />
+      <item index="6" class="java.lang.String" itemvalue="Application.rocket_server" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4f45906e-d2d1-4f8f-b1a6-c15961ba0ee8" name="Default" comment="" />
+      <created>1533723848918</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1533723848918</updated>
+      <workItem from="1533723851713" duration="11327000" />
+      <workItem from="1533797743296" duration="11000" />
+      <workItem from="1542618439427" duration="4195000" />
+      <workItem from="1542965523203" duration="5804000" />
+      <workItem from="1542987359210" duration="1352000" />
+      <workItem from="1543072596215" duration="1865000" />
+      <workItem from="1543130699888" duration="5389000" />
+      <workItem from="1543160804435" duration="637000" />
+      <workItem from="1543223878343" duration="6937000" />
+      <workItem from="1543245683088" duration="597000" />
+      <workItem from="1543328770725" duration="1660000" />
+      <workItem from="1543420787567" duration="2345000" />
+      <workItem from="1543718160827" duration="757000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="42876000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295583" sideWeight="0.49788582" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5021142" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/base/random.h</url>
+          <line>13</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/tcp/epoll_event_poller_impl.cc</url>
+          <line>1</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/base/random.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/string_utils.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-143">
+          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/string_utils_test.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/singleton.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/string_utils.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/random.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="7" lean-forward="false" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+          <folding>
+            <element signature="e#167#186#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/socket.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5471">
+          <caret line="196" column="8" lean-forward="false" selection-start-line="196" selection-start-column="8" selection-end-line="196" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/end_point.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-171">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/end_point.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-513">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/socket.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="156" column="23" lean-forward="false" selection-start-line="156" selection-start-column="23" selection-end-line="156" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/concurrency/task.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tcp/connection.h" />
+    <entry file="file://$PROJECT_DIR$/src/container/ring_buffer_test.cc" />
+    <entry file="file://$PROJECT_DIR$/src/tcp/tcp_callbacks.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tcp/epoll_event_poller_impl.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-208">
+          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tcp/event_dispatcher.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tcp/event_poller.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="103" column="27" lean-forward="false" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tcp/ip_address.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="73" column="25" lean-forward="false" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tcp/listen_connection.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tcp/listen_connection.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tcp/connection_base.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tcp/tcp_options.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11">
+          <caret line="137" column="5" lean-forward="false" selection-start-line="137" selection-start-column="5" selection-end-line="137" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tcp/event_poller.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="66" column="21" lean-forward="false" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/cygwin64/usr/include/pthread.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/concurrency/lock_base.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/concurrency/spin_lock.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="28" column="34" lean-forward="false" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/concurrency/mutex_lock.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/concurrency/rw_lock.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="7" lean-forward="false" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/concurrency/rw_lock.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/ring_buffer.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="40" column="13" lean-forward="false" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/concurrency/this_thread.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/concurrency/spin_lock.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/load_so.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/load_so.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/tcp_server.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="85" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/conf/rocket.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="33" column="10" lean-forward="false" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/so/app.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/so/app.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/concurrency/thread.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="35" column="17" lean-forward="false" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/concurrency/thread.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1482">
+          <caret line="78" column="59" lean-forward="false" selection-start-line="78" selection-start-column="59" selection-end-line="78" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="32" column="51" lean-forward="false" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/logger.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="40" column="25" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+          <folding>
+            <element signature="e#37#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/logger.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1805">
+          <caret line="95" column="9" lean-forward="false" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/main.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3914">
+          <caret line="206" column="0" lean-forward="false" selection-start-line="206" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/log.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="42" column="10" lean-forward="false" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/log.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1520">
+          <caret line="80" column="17" lean-forward="false" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/tcp_server_handler.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="36" column="36" lean-forward="false" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+          <folding>
+            <element signature="e#115#134#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tcp/epoll_event_poller_impl.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1406">
+          <caret line="74" column="56" lean-forward="false" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tcp/event_dispatcher.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="51" column="19" lean-forward="false" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/config.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="62" lean-forward="true" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,1 +1,0 @@
-valgrind  --log-file=valgrind.log --leak-check=full --show-reachable=yes ./rocket -c conf/rocket.conf 

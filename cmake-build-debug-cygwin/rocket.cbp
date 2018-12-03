@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="rocket"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\bin\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rocket_tcp_client_test">
+				<Option output="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/rocket_tcp_client_test.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/cygdrive/d/shared/myspace/rocket/src"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 rocket_tcp_client_test"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rocket_tcp_client_test/fast">
+				<Option output="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/rocket_tcp_client_test.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/cygdrive/d/shared/myspace/rocket/src"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 rocket_tcp_client_test/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rocket_tcp_server_test">
+				<Option output="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/rocket_tcp_server_test.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/cygdrive/d/shared/myspace/rocket/src"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 rocket_tcp_server_test"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rocket_tcp_server_test/fast">
+				<Option output="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/rocket_tcp_server_test.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/cygdrive/d/shared/myspace/rocket/src"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 rocket_tcp_server_test/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="consistent_hash_test">
+				<Option output="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/consistent_hash_test.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/cygdrive/d/shared/myspace/rocket/src"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 consistent_hash_test"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="consistent_hash_test/fast">
+				<Option output="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/consistent_hash_test.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/cygdrive/d/shared/myspace/rocket/src"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 consistent_hash_test/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rocket_s">
+				<Option output="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/librocket.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/cygdrive/d/shared/myspace/rocket/src"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 rocket_s"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rocket_s/fast">
+				<Option output="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/librocket.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/cygdrive/d/shared/myspace/rocket/src"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 rocket_s/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rocket">
+				<Option output="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/cygrocket-1.dll" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/cygdrive/d/shared/myspace/rocket/src"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 rocket"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rocket/fast">
+				<Option output="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/cygrocket-1.dll" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/cygdrive/d/shared/myspace/rocket/src"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 rocket/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rocket_server">
+				<Option output="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/bin/rocket_server.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/cygdrive/d/shared/myspace/rocket/src"/>
+					<Add directory="/cygdrive/d/shared/myspace/rocket/bin/."/>
+					<Add directory="/cygdrive/d/shared/myspace/rocket/src/base"/>
+					<Add directory="/cygdrive/d/shared/myspace/rocket/src/concurrency"/>
+					<Add directory="/cygdrive/d/shared/myspace/rocket/src/container"/>
+					<Add directory="/cygdrive/d/shared/myspace/rocket/src/tcp"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/bin/Makefile&quot;  VERBOSE=1 rocket_server"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/bin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/bin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/bin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rocket_server/fast">
+				<Option output="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/bin/rocket_server.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/cygdrive/d/shared/myspace/rocket/src"/>
+					<Add directory="/cygdrive/d/shared/myspace/rocket/bin/."/>
+					<Add directory="/cygdrive/d/shared/myspace/rocket/src/base"/>
+					<Add directory="/cygdrive/d/shared/myspace/rocket/src/concurrency"/>
+					<Add directory="/cygdrive/d/shared/myspace/rocket/src/container"/>
+					<Add directory="/cygdrive/d/shared/myspace/rocket/src/tcp"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/bin/Makefile&quot;  VERBOSE=1 rocket_server/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/bin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/bin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/bin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/bin/config.cc">
+			<Option target="rocket_server"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/bin/config.h">
+			<Option target="rocket_server"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/bin/config_reader.cc">
+			<Option target="rocket_server"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/bin/config_reader.h">
+			<Option target="rocket_server"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/bin/load_so.cc">
+			<Option target="rocket_server"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/bin/load_so.h">
+			<Option target="rocket_server"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/bin/logger.cc">
+			<Option target="rocket_server"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/bin/logger.h">
+			<Option target="rocket_server"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/bin/main.cc">
+			<Option target="rocket_server"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/examples/consistent_hash_test.cc">
+			<Option target="consistent_hash_test"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/examples/tcp_client.cc">
+			<Option target="rocket_tcp_client_test"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/examples/tcp_server.cc">
+			<Option target="rocket_tcp_server_test"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/base/arena.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/base/arena.h">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/base/consistent_hash.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/base/consistent_hash.h">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/base/end_point.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/base/end_point.h">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/base/ip_address.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/base/ip_address.h">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/base/log.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/base/log.h">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/base/random.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/base/random.h">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/base/socket.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/base/socket.h">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/base/string_utils.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/base/string_utils.h">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/base/string_utils_test.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/concurrency/mutex_lock.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/concurrency/mutex_lock.h">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/concurrency/rw_lock.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/concurrency/rw_lock.h">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/concurrency/spin_lock.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/concurrency/spin_lock.h">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/concurrency/this_thread.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/concurrency/this_thread.h">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/concurrency/thread.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/concurrency/thread.h">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/container/ring_buffer.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/container/ring_buffer.h">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/tcp/connection_id.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/tcp/connection_id.h">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/tcp/end_point.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/tcp/end_point.h">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/tcp/epoll_event_poller_impl.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/tcp/epoll_event_poller_impl.h">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/tcp/event_dispatcher.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/tcp/event_dispatcher.h">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/tcp/event_poller.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/tcp/event_poller.h">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/tcp/eventfd_interrupter_impl.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/tcp/eventfd_interrupter_impl.h">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/tcp/interrupter.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/tcp/interrupter.h">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/tcp/ip_address.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/tcp/ip_address.h">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/tcp/listen_connection.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/tcp/listen_connection.h">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/tcp/tcp_client.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/tcp/tcp_client.h">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/tcp/tcp_connection.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/tcp/tcp_connection.h">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/tcp/tcp_server.cc">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/src/tcp/tcp_server.h">
+			<Option target="rocket_s"/>
+			<Option target="rocket"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/shared/myspace/rocket/bin/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\bin\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,4 @@
+/home/chris/myspace/rocket/build/CMakeFiles/rocket.dir
+/home/chris/myspace/rocket/build/CMakeFiles/rocket_s.dir
+/home/chris/myspace/rocket/build/CMakeFiles/rocket_tcp_client_test.dir
+/home/chris/myspace/rocket/build/CMakeFiles/rocket_tcp_server_test.dir

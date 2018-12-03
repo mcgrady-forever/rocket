@@ -1,0 +1,1 @@
+/usr/bin/c++    -g -std=c++0x -Werror    CMakeFiles/rocket_tcp_server_test.dir/examples/tcp_server.cc.o  -o rocket_tcp_server_test -rdynamic -L/home/chris/myspace/rocket/build librocket.so.1.0 -lpthread -Wl,-rpath,/home/chris/myspace/rocket/build 

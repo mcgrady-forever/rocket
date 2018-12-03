@@ -1,0 +1,10 @@
+/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/CMakeFiles/rocket_tcp_client_test.dir
+/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/CMakeFiles/rebuild_cache.dir
+/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/CMakeFiles/rocket_tcp_server_test.dir
+/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/CMakeFiles/edit_cache.dir
+/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/CMakeFiles/consistent_hash_test.dir
+/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/CMakeFiles/rocket_s.dir
+/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/CMakeFiles/rocket.dir
+/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/bin/CMakeFiles/rebuild_cache.dir
+/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/bin/CMakeFiles/edit_cache.dir
+/cygdrive/d/shared/myspace/rocket/cmake-build-debug-cygwin/bin/CMakeFiles/rocket_server.dir

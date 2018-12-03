@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="rocket"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="E:/shared/myspace/myspace/rocket/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="E:/shared/myspace/myspace/rocket/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rocket">
+				<Option output="E:/shared/myspace/myspace/rocket/cmake-build-debug/librocket.dll" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/shared/myspace/myspace/rocket/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="E:/shared/myspace/myspace/rocket/src"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 rocket"/>
+					<CompileFile command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rocket/fast">
+				<Option output="E:/shared/myspace/myspace/rocket/cmake-build-debug/librocket.dll" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/shared/myspace/myspace/rocket/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="E:/shared/myspace/myspace/rocket/src"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 rocket/fast"/>
+					<CompileFile command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rocket_s">
+				<Option output="E:/shared/myspace/myspace/rocket/cmake-build-debug/librocket.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/shared/myspace/myspace/rocket/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="E:/shared/myspace/myspace/rocket/src"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 rocket_s"/>
+					<CompileFile command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rocket_s/fast">
+				<Option output="E:/shared/myspace/myspace/rocket/cmake-build-debug/librocket.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/shared/myspace/myspace/rocket/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="E:/shared/myspace/myspace/rocket/src"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 rocket_s/fast"/>
+					<CompileFile command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="E:/shared/myspace/myspace/rocket/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/make.exe -f &quot;E:/shared/myspace/myspace/rocket/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/base/arena.cc">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/base/arena.h">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/base/end_point.cc">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/base/end_point.h">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/base/ip_address.cc">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/base/ip_address.h">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/base/random.cc">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/base/random.h">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/base/socket.cc">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/base/socket.h">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/base/string_utils.cc">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/base/string_utils.h">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/base/string_utils_test.cc">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/concurrency/mutex_lock.cc">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/concurrency/mutex_lock.h">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/concurrency/rw_lock.cc">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/concurrency/rw_lock.h">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/concurrency/spin_lock.cc">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/concurrency/spin_lock.h">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/concurrency/this_thread.cc">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/concurrency/this_thread.h">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/concurrency/thread.cc">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/concurrency/thread.h">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/container/ring_buffer.cc">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/container/ring_buffer.h">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/container/ring_buffer_test.cc">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/tcp/connection.cc">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/tcp/connection.h">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/tcp/end_point.cc">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/tcp/end_point.h">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/tcp/epoll_event_poller_impl.cc">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/tcp/epoll_event_poller_impl.h">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/tcp/event_dispatcher.cc">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/tcp/event_dispatcher.h">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/tcp/event_poller.cc">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/tcp/event_poller.h">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/tcp/ip_address.cc">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/tcp/ip_address.h">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/tcp/listen_connection.cc">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/tcp/listen_connection.h">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/tcp/tcp_connection.cc">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/tcp/tcp_connection.h">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/tcp/tcp_server.cc">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/src/tcp/tcp_server.h">
+			<Option target="rocket"/>
+			<Option target="rocket_s"/>
+		</Unit>
+		<Unit filename="E:/shared/myspace/myspace/rocket/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

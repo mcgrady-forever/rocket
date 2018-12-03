@@ -1,0 +1,5 @@
+env=Environment(CCFLAGS = ['-g', '-Wall', '-std=c++0x'])
+env.Object([Glob('*.cc')],
+	LIBS = ['gtest'], 
+	LIBPATH = ['../3rd_party/gtest/lib'],
+	CPPPATH = ['../3rd_party/gtest/include'])
